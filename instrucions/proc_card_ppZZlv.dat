@@ -1,0 +1,28 @@
+#==============================================================
+# Process card for SMEFTsim_U35_MwScheme model
+# pp → ZZ → l+l- νν~
+#==============================================================
+
+import model SMEFTsim_U35_MwScheme_UFO
+
+# Optional SMEFT flags (you can adjust later)
+set NP 1          # Single EFT insertion
+set NPprop 0      # No EFT in propagators
+set SMHLOOP 0     # No Higgs loops (LO generation)
+
+# Define particle groups for convenience
+define p = g u c d s u~ c~ d~ s~
+define l+ = e+ mu+
+define l- = e- mu-
+define vl = ve vm vt
+define vl~ = ve~ vm~ vt~
+
+#-------------------------------------
+# Specify the physics process
+#-------------------------------------
+generate p p > z z, z > l+ l-, z > vl vl~
+
+#-------------------------------------
+# Output directory
+#-------------------------------------
+output SMEFT_ppZZlv -nojpeg
