@@ -1,0 +1,14 @@
+cmsDriver.py Configuration/GenProduction/python/pythia_ZZ_ll.py    
+    --python_filename nanogen_ZZ_cfg.py     
+    --eventcontent LHE     
+    --customise Configuration/DataProcessing/Utils.addMonitoring     
+    --datatier NANOAOD     
+    --fileout file:ZZ_SMEFT_NanoGEN.root     
+    --conditions 130X_mcRun3_2023_realistic_v14     
+    --beamspot Realistic25ns13p6TeVEarly2023Collision     
+    --step LHE,GEN,NANO     
+    --geometry DB:Extended     
+    --era Run3     
+    --no_exec     
+    --mc     
+    --n 10000
